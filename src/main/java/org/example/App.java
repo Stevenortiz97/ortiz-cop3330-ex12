@@ -36,11 +36,11 @@ public class App {
 
     }
 
-    private static int time() {
+    private static double time() {
 
         System.out.print("Enter the number of years: ");
 
-        return in.nextInt();
+        return in.nextDouble();
 
     }
 
@@ -51,15 +51,15 @@ public class App {
 
         double rate = rate();
 
-        int years = time();
+        double time = time();
 
-        double yearlyRate = ((initial * (1 + ((rate / 100) * years)))) * 100;
+        double yearlyRate = ((initial * (1 + ((rate / 100) * time)))) * 100;
 
-        int Rate = (int) Math.ceil(yearlyRate);
+        Double Rate = (Double) Math.ceil(yearlyRate);
 
         double rateEnd = Rate / 100.0;
 
-        System.out.print("After "+years+" years at "+rate+"%, the investment will be worth $");
+        System.out.print("After "+time+" years at "+rate+"%, the investment will be worth $");
 
         DecimalFormat format = new DecimalFormat("0.00");
 
